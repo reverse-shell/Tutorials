@@ -50,7 +50,7 @@ You may, however, choose to work with any other (textual) editor of your choice 
 
 </br>
 
-- [ ] Follow the [BankLesson1](BankLesson1) instructions to learn the basics of operating the Certora Prover.
+- [x] Follow the [BankLesson1](BankLesson1) instructions to learn the basics of operating the Certora Prover.
 
 </br>
 
@@ -74,7 +74,7 @@ For that reason we often write a shell scripts of the run command that includes 
 
 </br>
 
-- [ ] Follow the instructions on [RunScriptExample](RunScriptExample) to learn how to write run scripts, and how to execute the prover using scripts.
+- [x] Follow the instructions on [RunScriptExample](RunScriptExample) to learn how to write run scripts, and how to execute the prover using scripts.
 
 </br>
 
@@ -84,7 +84,7 @@ For that reason we often write a shell scripts of the run command that includes 
 
 </br>
 
-- [ ] Continue to next lesson: [Investigate Violations](../02.Lesson_InvestigateViolations) to exercise some more script writing and the art of understanding violations.
+- [x] Continue to next lesson: [Investigate Violations](../02.Lesson_InvestigateViolations) to exercise some more script writing and the art of understanding violations.
 
 </br>
 
