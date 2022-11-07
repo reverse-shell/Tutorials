@@ -80,6 +80,11 @@ contract MeetingScheduler is IMeetingScheduler {
             scheduledMeeting.status == MeetingStatus.PENDING,
             "can't start a meeting if it isn't pending"
         );
+        // @note missing check if block.timestamp is start meeting
+        require(
+            scheduledMeeting.startTime <= block.timestamp,
+            "can't start a meeting before its start time"
+        );
         require(
             block.timestamp < scheduledMeeting.endTime,
             "can't start a meeting after its end time"

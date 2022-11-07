@@ -37,6 +37,7 @@ rule integrityOfIncreaseAllowance(address spender, uint256 amount) {
 
 	assert amount > 0 => (allowanceAfter > allowanceBefore), "allowance did not increase";
     // Can you think of a way to strengthen this assert to account to all possible amounts?
+    assert allowanceBefore + amount == allowanceAfter, "invalid allowance";
 }
 
 
@@ -65,10 +66,14 @@ rule totalSupplyNotLessThanSingleUserBalance(method f, address user) {
 	calldataarg args;
 	uint256 totalSupplyBefore = totalSupply(e);
     uint256 userBalanceBefore = balanceOf(e, user);
+    require totalSupplyBefore >= userBalanceBefore;
     f(e, args);
     uint256 totalSupplyAfter = totalSupply(e);
     uint256 userBalanceAfter = balanceOf(e, user);
-	assert totalSupplyBefore >= userBalanceBefore => 
-            totalSupplyAfter >= userBalanceAfter,
+    // fixing here
+    assert totalSupplyAfter >= userBalanceAfter,
         "a user's balance is exceeding the total supply of token";
+	/*assert totalSupplyBefore >= userBalanceBefore => 
+            totalSupplyAfter >= userBalanceAfter,
+        "a user's balance is exceeding the total supply of token";*/
 }
