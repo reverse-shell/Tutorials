@@ -37,15 +37,15 @@ You can read more about it in the documentation [--method](https://certora.atlas
 
 > :warning: Make sure that you have the appropriate Solidity compilers on your pc.
 
- - [ ] Run a verification of the entire `meetings.spec` file with the appropriate solidity compiler and a message of your choice taken as an input. When time is right, abort the run command and invoke a verification on a specific rule of your choice from `ERC20.spec` with a distinct message. Go to the [verifications' job portal](https://prover.certora.com/) to monitor the status on both your runs. Check that both jobs give you results to ensure that you didn't abort the job too early.
+ - [x] Run a verification of the entire `meetings.spec` file with the appropriate solidity compiler and a message of your choice taken as an input. When time is right, abort the run command and invoke a verification on a specific rule of your choice from `ERC20.spec` with a distinct message. Go to the [verifications' job portal](https://prover.certora.com/) to monitor the status on both your runs. Check that both jobs give you results to ensure that you didn't abort the job too early.
  
- - [ ] Create a script that verifies the entire `meetings.spec` file with the appropriate Solidity compiler and a message of your choice taken as an input. Use the `--send_only` to see how the execution behaves.
+ - [x] Create a script that verifies the entire `meetings.spec` file with the appropriate Solidity compiler and a message of your choice taken as an input. Use the `--send_only` to see how the execution behaves.
 
-- [ ] Create a script that verifies a parametric rule of your choice in the `meetings.spec` file with the appropriate Solidity compiler and a message of your choice. Use the `--method` flag to run the verification against the `startMeeting()` method.
+- [x] Create a script that verifies a parametric rule of your choice in the `meetings.spec` file with the appropriate Solidity compiler and a message of your choice. Use the `--method` flag to run the verification against the `startMeeting()` method.
 
-- [ ] Run a verification of ***the same parametric rule*** in `meetings.spec` with the appropriate Solidity compiler and a message of your choice. Do not use the `--method` flag.
+- [x] Run a verification of ***the same parametric rule*** in `meetings.spec` with the appropriate Solidity compiler and a message of your choice. Do not use the `--method` flag.
 
-- [ ] In the [verifications' job portal](https://prover.certora.com/), compare the duration of the three runs - the entire `meeting.spec`, a single parametric rule in `meeting.spec`, and a single rule against a single method of `meeting.spec`.
+- [x] In the [verifications' job portal](https://prover.certora.com/), compare the duration of the three runs - the entire `meeting.spec`, a single parametric rule in `meeting.spec`, and a single rule against a single method of `meeting.spec`.
 
 If time differences don't seem that significant, keep in mind that these are relatively simple examples. In the future, you will encounter runs that may take longer to run.
 
