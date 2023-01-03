@@ -88,4 +88,38 @@ contract TicketDepot {
 			delete offerings[offerID];  
 	} 
 
+	/* HARNESS */ 
+	function getNumEvents() external view returns (uint16) {
+		return numEvents;
+	}
+
+	function getOwner() external view returns (address) {
+		return owner;
+	}
+
+	function getTransactionFee() external view returns (uint64) {
+		return transactionFee;
+	}
+
+	function getEventOwner(uint16 eventId) external view returns (address) {
+		return eventsMap[eventId].owner;
+	}
+	function getEventTicketPrice(uint16 eventId) external view returns (uint64) {
+		return eventsMap[eventId].ticketPrice;
+	}
+	function getEventTicketsRemaining(uint16 eventId) external view returns (uint16) {
+		return eventsMap[eventId].ticketsRemaining;
+	}
+
+	function getOfferingBuyer(bytes32 offeringId) external view returns (address) {
+		return offerings[offeringId].buyer;
+	}
+
+	function getOfferingPrice(bytes32 offeringId) external view returns (uint64) {
+		return offerings[offeringId].price;
+	}
+
+	function getOfferingDeadline(bytes32 offeringId) external view returns (uint256) {
+		return offerings[offeringId].deadline;
+	}
 } 
